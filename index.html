@@ -1,0 +1,188 @@
+<!-- 
+    Projeto com foco na realização de um portiforio com base nos meus conhecimentos atuais, porem com objetivo de contante atualizções.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio</title>
+</head>
+
+<body>
+    <!-- ========================================= Inicio do NAVBAR ========================================-->
+    <nav>
+        <div class="menu">
+            <a href="#Home">Home</a>
+            <a href="#Sobre">Sobre Mim</a>
+            <a href="#Habilidades">Habilidade</a>
+            <a href="#Projetoss">Projetos</a>
+            <div class="botão">
+                <div class="tema-btn">
+                    <span class="material-symbols-outlined active"> light_mode </span>
+                    <span class="material-symbols-outlined"> dark_mode </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--==============================Menu responsivel=================================================-->
+    <div class="mobile-menu-icon">
+        <button onclick="menuShow()"><img class="icon" src="imagens/menu_white_36dp.svg" alt=""></button>
+
+    </div>
+
+    <div class="mobile-menu">
+        <a href="#Home">Home</a>
+        <a href="#Sobre">Sobre Mim</a>
+        <a href="#Habilidades">Habilidade</a>
+        <a href="#Projetoss">Projetos</a>
+    </div>
+    <div class="superior">
+        <a href="#Home"><span class="material-symbols-outlined">
+                arrow_circle_up
+            </span></a>
+    </div>
+    <div class="cima">
+        <a href="#Home"><span class="material-symbols-outlined">
+                arrow_circle_up
+            </span></a>
+    </div>
+    <!-- ========================================= Final do NAVBAR ========================================-->
+
+    <!-- ========================================= Home ========================================-->
+    <section id="Home">
+        <h1 class="line typing-animation"> Olá, eu sou Wesley Silva !</h1>
+        <p class="line1 typing1-animation1"> Estutante de Desenvolvimento de Software! </p>
+    </section>
+    <div class="linha"></div>
+
+    <section id="Sobre">
+        <img src="imagens/eu.jpg" class="fotodeperfil">
+        <div class="card">
+            <div class="content">
+                <h3>Sobre Mim</h3>
+                <center>
+                    <h1>
+                        &nbsp;&nbsp;São Paulo - Sp<br>
+                        &nbsp; 21 anos<br>
+                        &nbsp;&nbsp;Eu escolhir tal área pois enquanto realizava o curso de técnico de Redes de
+                        Computadores por uma das
+                        instituições
+                        da Etec, tive a oportunidade de
+                        aprender um pouco o que era programação no ambiente voltado a manutenção de redes, e ao longo
+                        desse
+                        processo acabei me apaixonando pela área
+                        de programação como ADS ou DSM, o que me motivou a explorar mais essa área e levar ela como uma
+                        carreira.<br>
+                        &nbsp;&nbsp;Contudo ao terminar o curso, me encontrava em um momento de incerteza do que
+                        desejava
+                        realizar por haver outras áreas de tamanho interesse, porém acabei seguindo na área de
+                        desenvolvimento de software e atualmente me encontro realizando o curso de desenvolvimento de
+                        software pela Fatec Zona Sul ...</h1>
+                    <a href="https://github.com/WesleyS08"><img src="imagens/Git.png"></a>
+                    <a href="https://www.linkedin.com/in/wesley-silva-33624b17a/"><img
+                            src="imagens/linkedin-logo.png"></a>
+                </center>
+            </div>
+            <button id="vermais">Ler mais</button>
+        </div>
+    </section>
+    <div class="linha"></div>
+    <!-- =========================================  Habilidades  ========================================-->
+    <section id="Habilidades">
+        <h1>Habilidade</h1>
+    </section>
+    <div class="linha"></div>
+    <section id="Habilidade">
+        <div class="pc">
+            <img class="cardd" src="imagens/html.png" alt="">
+            <img class="cardd" src="imagens/css.png" alt="">
+            <img class="cardd" src="imagens/logoazuresql.png" alt="">
+            <img class="cardd" src="imagens/py.png" alt="">
+            <img class="cardd" src="imagens/java.png" alt="">
+        </div>
+        
+        <div class="habilidades-mobile">
+            <img class="cards" src="imagens/html.png" alt="">
+            <img class="cards" src="imagens/css.png" alt="">
+            <img class="cards" src="imagens/logoazuresql.png" alt="">
+            <img class="cards" src="imagens/py.png" alt="">
+            <img class="cards" src="imagens/java.png" alt="">
+        </div>
+    </section>
+    <div class="linha"></div>
+    <!-- =========================================  Projetos  ========================================-->
+    <section id="Projetoss">
+        <h1>Projetos</h1>
+    </section>
+    <div class="linha"></div>
+    <section id="Projetos">
+        <div class="content1">
+            <div class="slides">
+                <input type="radio" name="slide" id="slide1" checked>
+                <input type="radio" name="slide" id="slide2">
+                <input type="radio" name="slide" id="slide3">
+                <input type="radio" name="slide" id="slide4">
+                <input type="radio" name="slide" id="slide5">
+
+                <div class="slide s1">
+                    <a href="https://github.com/WesleyS08/Tela_de_Login" target="_blank"><span
+                            class="material-symbols-outlined"> expand_content </span></a>
+                    <img src="imagens/1.jpg" alt="projeto de uma tela de login">
+                </div>
+                <div class="slide">
+                    <a href="" target="_blank"> <span class="material-symbols-outlined"> expand_content </span></a>
+                    <img src="imagens/2.jpg" alt="Portfólio">
+                </div>
+                <div class="slide">
+                    <a href="https://github.com/WesleyS08/Crontrole_de_dispesas" target=blank> <span
+                            class="material-symbols-outlined"> expand_content </span></a>
+                    <img src="imagens/3.jpg" alt="leyte de um sistema de crontrole de dispesas">
+                </div>
+                <!-- <div class="slide">
+                    <a href=""target="_blank"> <span class="material-symbols-outlined"> expand_content </span></a>
+                    <img src="/imagens/4.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <a href="" target="_blank"> <span class="material-symbols-outlined"> expand_content </span></a>
+                    <img src="/imagens/5.jpg" alt="">
+                </div>-->
+            </div>
+            <div class="navigation">
+                <label class="bar" for="slide1"></label>
+                <label class="bar" for="slide2"></label>
+                <label class="bar" for="slide3"></label>
+                <!--<label class="bar" for="slide4"></label>
+                <label class="bar" for="slide5"></label>-->
+            </div>
+        </div>
+    </section>
+    <!-- ========================================= Scripts ========================================-->
+    <script src="java/vermais.js"></script>
+
+    <script src="java/menu.js"></script>
+    <script src="java/tema.js"></script>
+    <script type="text/javascript" src="java/vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".cardd"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1
+        });
+    </script>
+
+</body>
+
+</html>
