@@ -20,45 +20,62 @@
 </head>
 
 <body>
-    <!-- ========================================= Inicio do NAVBAR ========================================-->
-    <nav>
-        <div class="menu">
-            <a href="#Home">Home</a>
-            <a href="#Sobre">Sobre Mim</a>
-            <a href="#Habilidades">Habilidade</a>
-            <a href="#Projetoss">Projetos</a>
-            <div class="botão">
-                <div class="tema-btn">
-                    <span class="material-symbols-outlined active"> light_mode </span>
-                    <span class="material-symbols-outlined"> dark_mode </span>
-                </div>
+    <!-- ========================================= Inicio do sidebar ========================================-->
+    <nav class="sidebar close">
+        <header>
+<!-- ========================================= nome e seta para fechar o menu  ========================================-->
+            <div class="text header-text">
+                <span class="nome">Wesley Silva dos Santos</span>
+            </div>
+
+
+            <span class="material-symbols-outlined toggle"> arrow_right </span>
+        </header>
+    <!-- =========================================links para o restante da paginas  ========================================-->
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#Home">
+                            <span class="material-symbols-outlined icons"> home </span>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#Sobre">
+                            <span class="material-symbols-outlined icons"> person </span>
+                            <span class="text nav-text">Sobre Mim</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#Habilidade">
+                            <span class="material-symbols-outlined icons"> settings </span>
+                            <span class="text nav-text">Habilidades</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#Projetos">
+                            <span class="material-symbols-outlined icons"> create_new_folder </span>
+                            <span class="text nav-text">Projetos</span>
+                        </a>
+                    </li>
+                </ul>
+    <!-- ========================================= modo noturno e modo dia  ========================================-->
+                <li class="mode">
+                    <div class="moo-sun">
+                        <span class="material-symbols-outlined moon"> dark_mode </span>
+                        <span class="material-symbols-outlined sun"> light_mode </span>
+                    </div>
+                    <span class="mode-text text">Modo Dark</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
             </div>
         </div>
     </nav>
 
-    <!--==============================Menu responsivel=================================================-->
-    <div class="mobile-menu-icon">
-        <button onclick="menuShow()"><img class="icon" src="imagens/menu_white_36dp.svg" alt=""></button>
-
-    </div>
-
-    <div class="mobile-menu">
-        <a href="#Home">Home</a>
-        <a href="#Sobre">Sobre Mim</a>
-        <a href="#Habilidades">Habilidade</a>
-        <a href="#Projetoss">Projetos</a>
-    </div>
-    <div class="superior">
-        <a href="#Home"><span class="material-symbols-outlined">
-                arrow_circle_up
-            </span></a>
-    </div>
-    <div class="cima">
-        <a href="#Home"><span class="material-symbols-outlined">
-                arrow_circle_up
-            </span></a>
-    </div>
-    <!-- ========================================= Final do NAVBAR ========================================-->
+    <!-- ========================================= Final do sidebar ========================================-->
 
     <!-- ========================================= Home ========================================-->
     <section id="Home">
@@ -66,7 +83,7 @@
         <p class="line1 typing1-animation1"> Estutante de Desenvolvimento de Software! </p>
     </section>
     <div class="linha"></div>
-
+   <!-- ========================================= parte cujo apresento quem sou ========================================-->
     <section id="Sobre">
         <img src="imagens/eu.jpg" class="fotodeperfil">
         <div class="card">
@@ -74,18 +91,18 @@
                 <h3>Sobre Mim</h3>
                 <center>
                     <h1>
-                        &nbsp;&nbsp;São Paulo - Sp<br>
-                        &nbsp; 21 anos<br>
-                        &nbsp;&nbsp;Eu escolhir tal área pois enquanto realizava o curso de técnico de Redes de
+                        São Paulo - Sp<br>
+                        21 anos<br>
+                        &nbsp;&nbsp;&nbsp;Eu escolhir está área pois enquanto realizava o curso de técnico de Redes de
                         Computadores por uma das
                         instituições
-                        da Etec, tive a oportunidade de
-                        aprender um pouco o que era programação no ambiente voltado a manutenção de redes, e ao longo
+                        da Etec, tive oportunidade de
+                        aprender um pouco do que era programação no ambiente voltado a manutenção de redes, e ao longo
                         desse
                         processo acabei me apaixonando pela área
                         de programação como ADS ou DSM, o que me motivou a explorar mais essa área e levar ela como uma
                         carreira.<br>
-                        &nbsp;&nbsp;Contudo ao terminar o curso, me encontrava em um momento de incerteza do que
+                        &nbsp;&nbsp;&nbsp;Contudo ao terminar o curso, me encontrava em um momento de incerteza do que
                         desejava
                         realizar por haver outras áreas de tamanho interesse, porém acabei seguindo na área de
                         desenvolvimento de software e atualmente me encontro realizando o curso de desenvolvimento de
@@ -112,7 +129,7 @@
             <img class="cardd" src="imagens/py.png" alt="">
             <img class="cardd" src="imagens/java.png" alt="">
         </div>
-        
+
         <div class="habilidades-mobile">
             <img class="cards" src="imagens/html.png" alt="">
             <img class="cards" src="imagens/css.png" alt="">
@@ -150,6 +167,7 @@
                             class="material-symbols-outlined"> expand_content </span></a>
                     <img src="imagens/3.jpg" alt="leyte de um sistema de crontrole de dispesas">
                 </div>
+ <!-- =========================================Projetos Futuros  ========================================-->
                 <!-- <div class="slide">
                     <a href=""target="_blank"> <span class="material-symbols-outlined"> expand_content </span></a>
                     <img src="/imagens/4.jpg" alt="">
