@@ -3,6 +3,8 @@
 :root {
     --color-white: #f5f5f5;
     --color-lightt: #cd6ae9;
+    --color-seta: #a732c8;
+    --color-seta2: #0d0d0e;
     --color-light: #f0eff5;
     --color-gray-light: #5f5974;
     --color-gray-dark: #37334f;
@@ -10,9 +12,10 @@
     --color-font: #151826;
     --color-purple: rgb(160, 99, 234);
     --github: #333;
-    --link: #1da1f2;
+    --sidebar-color: #78738ab3;
     --color-dark-menu: #280e2d;
     --color-sombra: #25293c63;
+    --color-sidebar: #dccae73f;
 }
 
 .dark-theme {
@@ -22,9 +25,13 @@
     --color-dark: #ddd;
     --color-gray-dark: #adacb5;
     --color-dark-menu: #bc94d7;
+    --color-dark-menu2: #f3f3f3;
     --color-font: #f3f3f5;
     --color-purple: rgb(123, 47, 216);
     --color-sombra: rgba(187, 184, 184, 0.177);
+    --color-sidebar: #9491a0c9;
+    --color-seta: #cd6ae9;
+    --color-seta2: #f0eff5;
 }
 
 
@@ -34,6 +41,7 @@ body {
     min-height: 100vh;
     color: var(--color-dark);
     margin: 0;
+    transition: .7s;
 }
 
 
@@ -61,42 +69,116 @@ html {
     color: var(--color-dark);
 }
 
-/* ==================== nav bar/ ========================= */
+/* ====================================================== sidebar ================================================= */
+.sidebar .text {
+    font-size: 16px;
+    font-weight: 500;
+    transition: .4s;
+    white-space: nowrap;
+    ;
+}
 
-nav {
-    width: 100%;
-    background: var(--color-white);
-    padding: 1rem 0;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-family: poppins, sans-serif;
+.sidebar.close .text {
+    opacity: 0;
+}
+
+.sidebar {
     position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--color-sidebar);
+    transition: .4s;
+    z-index: 1;
+
 }
 
-nav .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.sidebar.close {
+    width: 50px;
+}
+
+.sidebar header {
     position: relative;
-    width: 50%;
-    margin: 0 auto;
 }
 
-nav .menu a {
-    color: var(--color-dark);
+
+.header-text .nome {
+    font-weight: 600;
+    text-align: center;
+    align-items: center;
+    transition: .4s;
 }
 
-nav .menu a:hover {
-    color: var(--color-dark-menu);
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -45px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background: var(--color-seta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--color-seta2);
+    font-size: 22px;
+    transition: .6s;
+    cursor: pointer;
+}
+
+.sidebar header .toggle:hover {
+    scale: 1.1;
+}
+
+.sidebar.close header .toggle {
+    transform: translateY(-50%);
+}
+
+.sidebar li {
+    height: 50px;
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.sidebar li .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    min-width: 60px;
+}
+
+.sidebar li .icons,
+.sidebar li .text {
+    color: var(--color-font);
+}
+
+.sidebar li a {
+    height: 100%;
+    display: flex;
+    align-items: center;
     text-decoration: none;
+    transition: .6s;
+}
+
+.sidebar li a:hover {
+    color: var(--color-dark-menu2);
     scale: 1;
     font-size: 20px;
-    padding-right: 30px;
-    padding-bottom: 8px;
+    padding-right: 90px;
+    padding-bottom: 9px;
     position: relative;
 }
 
-nav .menu a::after {
+
+.sidebar li a::after {
     content: " ";
     width: 0px;
     height: 5px;
@@ -107,46 +189,102 @@ nav .menu a::after {
     transition: width 0.5s;
 }
 
-nav .menu a:hover::after {
-    width: 85px;
+.sidebar li a:hover::after {
+    width: 150px;
 }
 
-
-nav .botão .tema-btn {
+.sidebar .menu-bar {
+    height: calc(100% - 50px);
     display: flex;
-    background: var(--color-white);
-    width: 4rem;
-    height: 2rem;
-    border-radius: 50%;
-    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-nav .botão .tema-btn span {
-    width: 50%;
-    height: 100%;
+.menu-bar .mode {
+    margin-top: 260px;
+    position: relative;
+    background: var(--color-white);
+    border-radius: 15px;
+
+}
+
+.menu-bar .mode .material-symbols-outlined {
+    margin-left: 15px;
+    position: absolute;
+}
+
+.menu-bar .mode .moo-sun {
+    height: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar .mode .sun {
+    opacity: 0;
+}
+
+.menu-bar .mode .toggle-switch {
+    position: absolute;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
-    border-radius: 50%;
+    height: 100%;
+    min-width: 60px;
+
 }
 
-nav .botão .tema-btn .active {
+.toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 44px;
+    border-radius: 25px;
     background: var(--color-dark);
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
     border-radius: 50%;
-    color: var(--color-white);
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    background: var(--color-white);
+    cursor: pointer;
+    transition: .6s;
+}
+/*================================================ controle do menu no modo noturno   =======================================*/
+
+body.dark-theme .switch::before {
+    left: 24px;
 }
 
-
-.mobile-menu {
-    display: none;
+body.dark-theme .menu-bar .mode .sun {
+    opacity: 1;
 }
 
-.superior .material-symbols-outlined {
-    display: none;
+body.dark-theme .menu-bar .mode .moon {
+    opacity: 0;
 }
-.cima .material-symbols-outlined {
-    display: none;
+/*================================================ controle do menu no modo fechado    =======================================*/
+.sidebar.close .menu-bar .mode .material-symbols-outlined {
+    opacity: 0;
+}
+
+.sidebar.close .menu-bar .mode {
+    background: transparent;
+    margin-left: 40px;
+}
+
+.sidebar.close .menu-bar .menu .material-symbols-outlined {
+    margin-left: -30px;
+}
+
+.sidebar.close li a:hover::after {
+    width: 20px;
 }
 
 /* ====================  Home ========================= */
@@ -169,12 +307,12 @@ section:nth-of-type(1) {
     white-space: nowrap;
     overflow: hidden;
 }
-
+/*================================================ controle de velocidade  =======================================*/
 .typing-animation {
     animation: blinkCursor 900ms steps(40) infinite normal,
         typing 5s steps(40) 7s infinite normal both;
 }
-
+/*================================================ efeito de digitação =======================================*/
 @keyframes typing {
     from {
         width: 0;
@@ -207,12 +345,12 @@ section:nth-of-type(1) {
     justify-items: left;
     position: absolute;
 }
-
+/*================================================ controle de velocidade  =======================================*/
 .typing1-animation1 {
     animation: blinkCursor 900ms steps(40) infinite normal,
         typing1 5s steps(45) 7s infinite normal both;
 }
-
+/*================================================ efeito de digitação =======================================*/
 @keyframes typing1 {
     from {
         width: 0;
@@ -242,12 +380,13 @@ section:nth-of-type(2) {
 
 .fotodeperfil {
     width: 250px;
-    height: 250px; 
+    height: 250px;
     border-radius: 150px;
     position: absolute;
     margin-top: -330px;
     border: solid 2px var(--color-purple);
     box-shadow: 10px 10px 10px var(--color-sombra);
+    z-index: 1;
 }
 
 /** Card **/
@@ -311,6 +450,7 @@ section:nth-of-type(2) {
     margin-bottom: 25px;
     font-size: 25px;
     position: relative;
+    margin-top: 25px;
 }
 
 .content h1 {
@@ -320,6 +460,7 @@ section:nth-of-type(2) {
     position: relative;
     margin-bottom: 25px;
     line-height: 30px;
+    margin-left: 25px;
 
 }
 
@@ -403,7 +544,7 @@ section:nth-of-type(4) {
     scale: 1.3;
 }
 
-#Habilidade .habilidades-mobile img{
+#Habilidade .habilidades-mobile img {
     display: none;
 }
 
@@ -505,7 +646,7 @@ input {
     margin-left: -40%;
 }
 
-/*
+/* ======================================================= projetos futuros =========================================================
 #slide4:checked ~ .s1{
     margin-left: -60%;
 }
@@ -517,68 +658,9 @@ input {
 */
 
 @media screen and (max-width: 730px) {
-    /*==========================Menu versão celular ==================================*/
-    nav {
-        display: none;
-    }
-
-    .mobile-menu-icon {
-        display: block;
-        border-radius: 15px;
-    }
-
-    .mobile-menu-icon {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-
-    }
-
-    .superior .material-symbols-outlined {
-        display: inline-block;
-        color: var(--color-font);
-        margin-block-start: 120%;
-        position: fixed;
-        margin-left: 90%;
-        scale: 1.4;
-        transition: .4s;
-    }
-
-    .superior .material-symbols-outlined:hover {
-        scale: 1.6;
-        color: #6a15a7;
-    }
-
-    .mobile-menu a {
-        color: var(--color-font);
-        display: flex;
-        height: 100%;
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 1rem;
-        background: transparent;
-    }
-
-    .mobile-menu a:hover {
-        color: var(--color-dark-menu);
-        text-decoration: none;
-        scale: 1.3;
-    }
-
-    .mobile-menu a {
-        display: block;
-        padding-top: 1, 2rem;
-    }
 
 
-    .open {
-        display: block;
-    }
-    #Sobre img{
-        position: absolute;
-     
-    }
+
     section:nth-of-type(2) {
         height: 200vh !important;
         display: flex;
@@ -586,12 +668,12 @@ input {
         justify-content: center;
         gap: 1rem;
     }
-    
+
     /*===================================================HAbilidade ================================================*/
 
-   
 
-    #Habilidade .habilidades-mobile img{
+
+    #Habilidade .habilidades-mobile img {
         border-radius: 50%;
         background-color: var(--color-white);
         align-items: center;
@@ -605,6 +687,7 @@ input {
         display: flex;
         align-items: center;
         justify-content: center;
+
     }
 
     .linha {
@@ -619,7 +702,8 @@ input {
         margin-block-start: 90px;
         font-size: 1.1rem;
     }
-/*==========================================================Projetos================================================================*/
+
+    /*==========================================================Projetos================================================================*/
     .content1 {
         height: 100%;
         width: 100%;
@@ -627,7 +711,7 @@ input {
         overflow: hidden;
         align-items: center;
         position: absolute;
-       margin-right: 70%;
+        margin-right: 70%;
     }
 
     .navigation {
@@ -641,7 +725,7 @@ input {
 
 }
 
-@media screen and (max-width: 318px) {
+@media screen and (max-width: 352px) {
     .line {
         font-size: 1.3rem;
     }
@@ -651,17 +735,18 @@ input {
         font-size: 0.8rem;
         margin-left: 45px;
     }
+
     @keyframes typing1 {
         from {
             width: 0;
         }
-    
+
         to {
             width: 23em;
         }
     }
-   
-    .cima .material-symbols-outlined{
+
+    .cima .material-symbols-outlined {
         display: inline-block;
         color: var(--color-dark);
         margin-block-start: 580px;
@@ -670,10 +755,11 @@ input {
         scale: 1.3;
     }
 
-    .cima .material-symbols-outlined:hover{
+    .cima .material-symbols-outlined:hover {
         scale: 1.6;
         color: var(--color-lightt);
     }
+
     section:nth-of-type(1) {
         height: 130vh !important;
         display: flex;
@@ -689,15 +775,18 @@ input {
         justify-content: center;
         gap: 1rem;
     }
+
     .fotodeperfil {
         width: 250px;
-        height: 250px; 
+        height: 250px;
         border-radius: 150px;
         position: absolute;
         margin-top: -820px;
         border: solid 2px var(--color-purple);
         box-shadow: 10px 10px 10px var(--color-sombra);
+        z-index: 0;
     }
+
     #Habilidade img {
         display: inline-flex;
         margin: 0 5pix;
@@ -705,9 +794,11 @@ input {
         width: 150px;
         height: 150px;
     }
+
     #Habilidade img:hover {
         scale: none;
     }
+
     .content1 {
         height: 100%;
         width: 100%;
@@ -716,7 +807,7 @@ input {
         align-items: center;
         position: absolute;
         margin-left: 15%;
-        
+
     }
 
     .navigation {
@@ -727,4 +818,5 @@ input {
         transform: translate(-50%);
         display: flex;
     }
+}
 }
