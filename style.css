@@ -659,7 +659,18 @@ input {
 
 @media screen and (max-width: 730px) {
 
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--color-sidebar);
+    transition: .4s;
+    z-index: 1;
 
+}
 
     section:nth-of-type(2) {
         height: 200vh !important;
@@ -726,6 +737,18 @@ input {
 }
 
 @media screen and (max-width: 352px) {
+    .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--color-sidebar);
+    transition: .4s;
+    z-index: 1;
+
+}
     .line {
         font-size: 1.3rem;
     }
