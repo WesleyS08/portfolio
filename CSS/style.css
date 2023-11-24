@@ -369,7 +369,7 @@ span {
 .card .img {
     width: 10.8em;
     height: 10.8em;
-    background: url(/IMAGENS/IMG_20230831_094752_242_PORTRAIT.jpg);
+    background: url(IMAGENS/IMG_20230831_094752_242_PORTRAIT.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     /* Ajuste a posição conforme necessário */
