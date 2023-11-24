@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portiforio</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="logo"> Portfolio</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#Sobre-Mim">Sobre Mim</a>
+            <a href="#Habilidades">Habilidades</a>
+            <a href="#Projetos">Projetos</a>
+    
+
+        </nav>
+    </header>
+    <!-- Pagina inicial-->
+    <section class="home" id="home">
+
+        <div class="home-content">
+            <h3>Olá, eu sou</h3>
+            <h1> Wesley <span>Silva</span></h1>
+            <p>Este é um projeto com foco em demonstrar algumas habilidades que possuo, com o objetivo de obter um
+                estágio.</p>
+
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/wesley-silva-33624b17a/"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://github.com/WesleyS08"><i class='bx bxl-github'></i></a>
+            </div>
+            <a href="/curriculo/Wesley S.pdf" download class="btn">Download CV</a>
+        </div>
+
+        <div class="profession-container">
+            <div class="profession-box">
+                <div class="profession" style="--i:0;">
+                    <i class='bx bxs-edit-alt'></i>
+                    <h3>Estudante</h3>
+                </div>
+                <div class="profession" style="--i:1;">
+                    <i class='bx bxs-data'></i>
+                    <h3>DBA</h3>
+                </div>
+                <div class="profession" style="--i:2;">
+                    <i class='bx bx-code-alt'></i>
+                    <h3>WebDev</h3>
+                </div>
+                <div class="profession" style="--i:3;">
+                    <i class='bx bxs-file-doc'></i>
+                    <h3>Docer</h3>
+                </div>
+                <div class="circle"></div>
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <div class="home-img">
+        </div>
+    </section>
+    <!--SOBRE MIM -->
+    <section class="Sobre-Mim" id="Sobre-Mim">
+        <div class="Sobre-img">
+            <img src="" alt="">
+        </div><!--Imagem no sobre mim-->
+
+        <div class="card">
+            <div class="img"></div>
+            <h3>Sobre<span> Mim</span></h3>
+            <p class="info">Após concluir o ensino médio, estava indeciso sobre qual área seguir. Foi nesse momento que descobri a Fundação do
+            Centro Paula Souza, mais especificamente seus cursos técnicos. Ao realizar o curso técnico em redes de computadores,
+            adquiri conhecimentos em diversas áreas, porém me apaixonei pela programação. Com essa paixão em mente, decidi ingressar
+            na área por meio do Centro Paula Souza novamente, desta vez através da Fatec, que oferece cursos superiores. Atualmente,
+            estou matriculado no curso de Desenvolvimento de Software na Fatec, onde estou me dedicando e aprimorando minhas
+            habilidades nessa área.</p>
+            <button id="read_button">Ler mais </button>
+        </div>
+    </section>
+    <!-- Habilidades -->
+    <section class="Habilidades" id="Habilidades">
+        <div class="skills">
+        <h1>Minhas <span>Habilidades</span></h1>
+        <ul>
+            <li>
+                <h3>HTML</h3>
+                <span class="barras"><span class="html"></span></span>
+            </li>
+            <li>
+                <h3>CSS</h3>
+                <span class="barras"><span class="css"></span></span>
+            </li>
+            <li>
+                <h3>JAVASCRIPT</h3>
+                <span class="barras"><span class="javascript"></span></span>
+            </li>
+            <li>
+                <h3>DBA</h3>
+                <span class="barras"><span class="DBA"></span></span>
+            </li>
+            <li>
+                <h3>Documentação</h3>
+                <span class="barras"><span class="documentação"></span></span>
+            </li>
+            <li>
+                <h3>Outros</h3>
+                <span class="barras"><span class="outros"></span></span>
+            </li>
+        </ul>
+    </div>
+    </section>
+    <!--Projetos realizados-->
+    <section class="Projetos" id="Projetos">
+                <h1>Meus <span>Projetos</span></h1>
+        <div class="project-container" id="projectContainer">
+            <div class="card__container">
+                <article class="card__article">
+                    <img src="/IMAGENS/Captura de tela 2023-11-24 135725.png" alt="" class="card__img">
+                    <div class="card__data">
+                        <span class="card__description">Power Bi realizado para uma dicplina da facultade </span>
+                        <h2 class="card__title">Power Bi</h2>
+                        <a href="https://app.powerbi.com/view?r=eyJrIjoiZmE1NmE4NDEtMWFlYy00MzI0LWFhODAtZThiOGVjMjZlNzZlIiwidCI6ImNmNzJlMmJkLTdhMmItNDc4My1iZGViLTM5ZDU3YjA3Zjc2ZiIsImMiOjR9&embedImagePlaceholder=true" class="card__button">Veja Mais</a>
+                    </div>
+                </article>
+                <article class="card__article">
+                    <img src="/IMAGENS/1.jpg" alt="" class="card__img">
+                    <div class="card__data">
+                        <span class="card__description">Leyaout de uma pagina de login</span>
+                        <h2 class="card__title">WEB</h2>
+                        <a href="https://github.com/WesleyS08/Tela_de_Login" class="card__button">Veja Mais</a>
+                    </div>
+                </article>
+                <article class="card__article">
+                    <img src="/IMAGENS/Captura de tela 2023-11-24 141422.png" alt="" class="card__img">
+                    <div class="card__data">
+                        <span class="card__description">Documentação</span>
+                        <h2 class="card__title">Documentação realizado no projeto do power bi</h2>
+                        <a href="https://github.com/WesleyS08/Josenir-BD" class="card__button">Veja Mais</a>
+                    </div>
+                </article>
+                <article class="card__article">
+                    <img src="/IMAGENS/Imagem1.png" alt="" class="card__img">
+                    <div class="card__data">
+                        <span class="card__description">Ligação com um banco de dados, onde salva o pedido de uma pessoa</span>
+                        <h2 class="card__title">Banco de dados</h2>
+                        <a href="https://github.com/WesleyS08/Ligacao_com_banco" class="card__button">Veja Mais</a>
+                    </div>
+                </article>
+                <article class="card__article">
+                    <img src="/IMAGENS/Captura de tela 2023-11-24 142222.png" alt="" class="card__img">
+                    <div class="card__data">
+                        <span class="card__description">Codigo para aprendizado de tecnicas de programaçao</span>
+                        <h2 class="card__title">Outros</h2>
+                        <a href="https://github.com/WesleyS08/Com-rcio-Eletronico-com-Autenticacao-em-Python-e-SQLite" class="card__button">Veja Mais</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+    </section>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="JS/menu.js"></script>
+        <script src="JS/menu_responsivel.js"></script>
+        <script src="JS/scroll.js"></script>
+        <script src="JS/app.js"></script>
+        <script src="Js/dark-mode.js"></script>
+        <script src="JS/Lermais.js"></script>
+</body>
+
+</html>
