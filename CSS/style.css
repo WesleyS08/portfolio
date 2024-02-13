@@ -312,11 +312,6 @@ span {
     gap: 4rem;
 }
 
-
-.sobre_mim img {
-    width: 40vh;
-}
-
 .heading {
     font-size: 4.5rem;
     text-align: center;
@@ -335,296 +330,187 @@ span {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
+.Sobre-Mim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Define a altura da seção como 100% da altura da viewport */
+}
 
 .card {
-    width: 115rem;
-    margin-left: 5%;
+    max-width: 1006px;
     background: #171717;
-    transition: .5s ease-in-out;
-    clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    transition: 0.5s ease-in-out;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1.5rem;
 }
 
 .card h3 {
     font-weight: bold;
     color: white;
     text-align: center;
-    display: block;
     font-size: 1.9rem;
 }
 
 .card .info {
     font-weight: 400;
     color: white;
-    display: block;
     text-align: center;
     font-size: 1.7rem;
-    margin: 1em;
+    margin: 1em 0;
 }
 
 .card .img {
     width: 10.8em;
     height: 10.8em;
-    background: url(IMAGENS/IMG_20230831_094752_242_PORTRAIT.jpg);
+    background: url("IMAGENS/IMG_20230831_094752_242_PORTRAIT.jpg");
     background-repeat: no-repeat;
     background-position: center center;
-    /* Ajuste a posição conforme necessário */
     background-size: cover;
-    /* Isso fará com que a imagem cubra completamente o contêiner */
     border-radius: 15px;
     margin: auto;
 }
 
-.card .share {
-    margin-top: 1em;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-}
-
-.card a {
-    color: white;
-    transition: .4s ease-in-out;
-}
-
-.card a:hover {
-    color: var(--main-color);
-}
-
 .card button {
     padding: 0.8em 1.7em;
-    display: block;
-    margin: auto;
+    margin-top: 1em;
     border-radius: 25px;
     border: none;
     font-weight: bold;
     background: #ffffff;
     color: rgb(0, 0, 0);
-    transition: .4s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 
 .card button:hover {
     background: var(--main-color);
-    color: white;
+   
     cursor: pointer;
 }
 
 .skills {
-    justify-items: center;
-    /* padding: 40px; */
     display: flex;
-    justify-content: space-around;
-    border-radius: 20px;
-    /* background-color: var(--bg-color); */
-    box-shadow: 0 15px 20px #000;
     flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
-    /* Adicione a propriedade margin aqui */
-    margin-bottom: 10px;
-    /* Ou qualquer valor desejado para o espaçamento vertical entre os itens */
+    margin-bottom: 20px; /* Ajuste o valor conforme necessário */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 }
-.skills h1{
-    font-size: 2.8rem;
-}
-.skills ul{
-    list-style: none;
 
+.skills h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo do título */
 }
+
+.skills ul {
+    list-style: none;
+    padding: 0; /* Remove o preenchimento padrão da lista */
+}
+
 .skills ul li {
     margin: 20px 0;
 }
 
-.skills .barras{
+.skills .barras {
     background-color: #ccc;
     display: block;
     height: 20px;
-    width: 100vh;
+    width: 71vh;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
 }
-.barras > span{
+
+.barras > span {
     height: 20px;
     background: linear-gradient(to right, #a3c9c9, #954ef9);
     position: absolute;
+    width: 0; /* Defina a largura inicial como 0 para a animação funcionar corretamente */
+}
 
+/* Adicione as animações com atraso */
+.html {
+    animation: html 3s forwards 3s infinite;
 }
-.html{
-    width: 80%;
-    animation: html 3s;
+
+.css {
+    animation: css 3s forwards 3s infinite;
 }
-.css{
-    width: 60%;
-    animation: css 3s;
+
+.javascript {
+    animation: javascript 3s forwards 3s infinite;
 }
-.javascript{
-    width: 50%;
-    animation: javascript 3s;
+
+.DBA {
+    animation: DBA 3s forwards 3s infinite;
 }
-.DBA{
-    width: 85%;
-    animation: DBA 3s;
+
+.documentacao {
+    animation: documentacao 3s forwards 3s infinite;
 }
-.documentação{
-    width: 70%;
-    animation: documentação 3s;
-}
-.outros{
-    width: 68%;
-    animation: outros 3s;
+
+.outros {
+    animation: outros 3s forwards 3s infinite;
 }
 
 @keyframes html {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 80%;
-    }
-}
-@keyframes css {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 60%;
-    }
-}
-@keyframes javascript {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 50%;
-    }
-}
-@keyframes DBA {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 85%;
-    }
-}
-@keyframes documentação {
     0% {
         width: 0%;
     }
+    100% {
+        width: 80%;
+    }
+}
 
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes javascript {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes DBA {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 85%;
+    }
+}
+
+@keyframes documentacao {
+    0% {
+        width: 0%;
+    }
     100% {
         width: 70%;
     }
 }
+
 @keyframes outros {
-    0%{
+    0% {
         width: 0%;
     }
-    100%{
+    100% {
         width: 68%;
     }
 }
-@media(max-width:1200px) {
-    html {
-        font-size: 55%;
-    }
 
-    .home .profession-container {
-        height: 85.8rem;
-    }
-
-    .home .profession-container .profession-box {
-        right: -12rem;
-        height: 85.8rem;
-    }
-
-    .home .profession-container .overlay {
-        right: -9rem;
-    }
-}
-
-@media(max-width:1024px) {
-
-
-    .header {
-        padding: 2rem 3%;
-    }
-
-    section {
-        padding: 10rem 3% 2rem;
-    }
-
-    .home .profession-container .profession-box {
-        right: -22rem;
-    }
-
-    .home .profession-container .overlay {
-        right: -15rem;
-    }
-}
-
-@media (max-width: 991px) {
-    header {
-        padding: 2rem 3%;
-    }
-
-    .container ul li a span {
-        color: var(--main-color);
-    }
-
-    .home .home-content {
-        max-width: 50rem;
-    }
-
-    .home .profession-container .profession-box {
-        right: -45rem;
-    }
-
-    .home .profession-container .overlay {
-        right: -39.5rem;
-    }
-
-    .home-img img {
-        display: none;
-    }
-
-    .home .profession-container .overlay {
-        border-bottom: 344px solid var(--main-color);
-    }
-
-}
-
-.nav-list.active {
-    transform: translateX(0);
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-}
-
-.mobile-menu.active .line2 {
-    opacity: 0;
-}
-
-.mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
-}
 .Projetos h1{
     font-size: 2.8rem;
     text-align: center;
@@ -759,29 +645,91 @@ span {
         overflow: hidden;
     }
 }
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .home .profession-container {
+        height: 85.8rem;
+    }
+
+    .home .profession-container .profession-box {
+        right: -12rem;
+        height: 85.8rem;
+    }
+
+    .home .profession-container .overlay {
+        right: -9rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .home .profession-container .profession-box {
+        right: -22rem;
+    }
+
+    .home .profession-container .overlay {
+        right: -15rem;
+    }
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 2rem 3%;
+    }
+
+    .container ul li a span {
+        color: var(--main-color);
+    }
+
+    .home .home-content {
+        max-width: 50rem;
+    }
+
+    .home .profession-container .profession-box {
+        right: -45rem;
+    }
+
+    .home .profession-container .overlay {
+        right: -39.5rem;
+        border-bottom: 344px solid var(--main-color);
+    }
+
+    .home-img img {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .card__container {
-            grid-template-columns: repeat(1, 1fr);
-            column-gap: 1.5rem;
-        }
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 1.5rem;
+    }
+
     .skills .barras {
-            background-color: #ccc;
-            display: block;
-            height: 20px;
-            width: 71vh;
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-        }
+        background-color: #ccc;
+        display: block;
+        height: 20px;
+        width: 43vh;
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
     .card {
-        width: 90%;
-        /* Ajuste a largura conforme necessário para telas menores */
-        margin-left: 2%;
-        /* Ajuste a margem conforme necessário para telas menores */
+        width: 100%; /* Use uma porcentagem ou valor fixo adequado */
+        margin-left: 0;
         clip-path: none;
-        /* Remova a clip-path para telas menores, se necessário */
         border-radius: 10px;
-        /* Ajuste o raio da borda conforme necessário para telas menores */
     }
 
     #menu-icon {
@@ -858,7 +806,6 @@ span {
         padding: 0 13px;
         left: auto;
         transform-origin: 0;
-
     }
 
     .home .profession-box .profession:nth-child(1) {
@@ -892,5 +839,6 @@ span {
     .container nav {
         display: none;
     }
-
 }
+
+/* Outras regras @media aqui, se necessário */

@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Bem-vindo ao meu portfólio! Este repositório contém informações sobre mim, meus projetos e habilidades. Estou constantemente atualizando e adicionando novos trabalhos, então fique à vontade para explorar.",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.41.2",
+    "@types/node": "^20.11.17"
+  }
+}
